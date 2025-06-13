@@ -12,7 +12,7 @@ pub fn public_ip() -> String {
         let timeout = std::time::Duration::from_millis(2000);
         match std::net::TcpStream::connect_timeout(&addr, timeout) {
             Ok(mut stream) => {
-                let msg = format!("GET / HTTP/1.1\r\nHost: {}\r\n\r\n", it);
+                let msg = format!("GET / HTTP/1.1\r\nHost: {}\r\nUser-Agent: curl/8.9.1\r\n\r\n", it);
                 let msg = msg.as_bytes();
                 std::io::Write::write(&mut stream, msg).unwrap();
                 let mut buf = [0u8; 1024];

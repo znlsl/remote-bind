@@ -6,6 +6,8 @@ Windows / Linux: [releases](https://github.com/rust-net/remote-bind/releases)
 
 Android: [remote-bind-apk](https://github.com/rust-net/remote-bind-apk)
 
+Docker: [imgxx/remote-bind](https://hub.docker.com/r/imgxx/remote-bind)
+
 ## 服务器中继
 在服务器 `x.x.x.x` 的 `1234` 端口上运行server，并设置密码为 `passwd` ：
 ```
