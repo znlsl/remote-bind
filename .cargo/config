@@ -1,2 +1,6 @@
 [target.'cfg(windows)']
 rustflags = ["-C", "target-feature=+crt-static"]
+
+[target.aarch64-unknown-linux-musl]
+# apt install musl-tools
+linker = "musl-gcc"  # default: aarch64-linux-musl-gcc
